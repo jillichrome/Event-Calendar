@@ -33,6 +33,13 @@ export default class Form extends React.Component {
     })
   };
 
+  componentDidMount() {
+    let elems = document.querySelectorAll('.datepicker');
+    M.Datepicker.init(elems, {
+      autoClose: false,
+      format: 'mm/dd/yyyy'});
+  }
+
   render() {
     return(
       <div className='form-container col s12'>
