@@ -1,5 +1,5 @@
 import React from 'react';
-import Materialize from 'materialize-css';
+import M from 'materialize-css';
 import './form.css';
 
 export default class Form extends React.Component {
@@ -36,6 +36,7 @@ export default class Form extends React.Component {
   render() {
     return(
       <div className='form-container col s12'>
+        <h4 className='blue-grey-text text-darken-1 center'>Add an Event</h4>
         <form action=''>
           <div className='input-field'>
             <input id='title' type='text' onChange={this.handleChange} />

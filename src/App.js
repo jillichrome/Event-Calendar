@@ -1,19 +1,20 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import VolCalendar from './components/calendar/calendar';
+import NavBar from './components/navbar';
 import Form from './components/calendar/form';
 
 function App() {
   return (
-    <div className="App">
-      <h2 className='blue-grey-text text-darken-1 center-align'>Volunteer Calendar</h2>
-      <div className='section'>
-        <VolCalendar />
+    <BrowserRouter>
+      <div className="App">
+        <NavBar />
+        <Switch>
+          <Route exact path='/' component={VolCalendar} />
+          <Route path='/add' component={Form} />
+        </Switch>
       </div>
-      <div className='section'>
-        <h6 className='blue-grey-text text-darken-1 center-align'>Add An Event</h6>
-        <Form />
-      </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

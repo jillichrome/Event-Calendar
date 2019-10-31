@@ -31,17 +31,18 @@ export default class VolCalendar extends React.Component {
 
   render() {
     return(
-      <div className='calendar-container' style={{height : 700}}>
-        <Calendar
-          selectable
-          localizer={localizer}
-          events={events}
-          views={allViews}
-          startAccessor='start'
-          endAccessor='end'
-          onSelectEvent={event => alert(event.title, event.start)}
-          onSelectSlot={this.handleSelect}
-        />
+      <div className='calendar-container' style={{height: 700}}>
+        <h4 className='blue-grey-text text-darken-1 center'>Volunteer Calendar</h4>
+          <Calendar
+            selectable
+            localizer={localizer}
+            events={events}
+            views={allViews}
+            startAccessor='start'
+            endAccessor='end'
+            onSelectEvent={event => alert(event.title, event.start)}
+            onSelectSlot={this.handleSelect}
+          />
       </div>
     )
   }
